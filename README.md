@@ -1,6 +1,6 @@
 # PHP_WebSocketServer
 
-This is a PHP WebSocket Server that uses [Rachet](https://github.com/ratchetphp/Ratchet). This example uses port 5050.
+This is a PHP WebSocket Server that uses [Rachet](https://github.com/ratchetphp/Ratchet).
 
 ## Usage ##
 
