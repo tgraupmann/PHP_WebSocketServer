@@ -22,7 +22,16 @@ class MyChat implements MessageComponentInterface {
     }
 
     public function onMessage(ConnectionInterface $from, $msg) {
-	    //echo ($msg . "\r\n");
+  	    //echo ($msg . "\r\n");
+        $json = json_decode($msg);
+        //echo ($json->data . "\r\n");
+        $jsonData = json_decode($json->data);
+        //echo ($jsonData->timestamp . "\r\n");
+        //echo (count($this->clients) . "\r\n");
+        $jsonData->clients = count($this->clients) - 1;
+        //echo (json_encode($jsonData));
+        $json->data = json_encode($jsonData);
+
         foreach ($this->clients as $client) {
             if ($from != $client) {
                 $client->send($msg);
