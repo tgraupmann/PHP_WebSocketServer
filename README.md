@@ -23,7 +23,7 @@ The port is configured in /vendor/cboden/ratchet/src/Ratchet/App.php and in the 
 
 **App.php**
 
-Configure the server port.
+Configure the server IP address and port.
 
 ```
 public function __construct($httpHost = 'localhost', $port = 5050, $address = '127.0.0.1', LoopInterface $loop = null) {
